@@ -12,29 +12,5 @@
     <button onclick="adicionarNumero()">Adicionar</button>
     <button onclick="calcularSoma()">Calcular Soma</button>
     <p id="resultado"></p>
-
-    <script>
-        let numeros = [];
-
-        function adicionarNumero() {
-            let inputNumero = document.getElementById("numero");
-            let numero = parseFloat(inputNumero.value);
-
-            if (!isNaN(numero)) {
-                numeros.push(numero);
-                inputNumero.value = ''; // Limpa o campo de entrada
-            } else {
-                alert("Por favor, insira um número válido.");
-            }
-        }
-
-        function calcularSoma() {
-            let soma = 0;
-            for (let i = 0; i < numeros.length; i++) {
-                soma += numeros[i];
-            }
-            document.getElementById("resultado").innerText = "A soma dos números é: " + soma;
-        }
-    </script>
 </body>
 </html>
